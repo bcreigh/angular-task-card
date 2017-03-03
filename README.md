@@ -1,1 +1,1 @@
-A starting point for Angular2 applications
+Task Card Application written in Angular2
