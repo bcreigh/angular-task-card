@@ -1,5 +1,6 @@
 .card {
   border-radius: 0;
+  cursor: pointer;
 }
 
 .card,
@@ -8,11 +9,22 @@
   border: none;
 }
 
+.card.completed,
+.card.completed .card-footer {
+  background-color: #EEE;
+  color: #CCC;
+}
+
 .card-footer {
   text-align: right;
 }
 
-i {
+i.fa-times {
   color: #CC0000;
+  padding-right: .5rem;
+}
+
+i.fa-check {
+  color: #c5dac5;
   padding-right: .5rem;
 }

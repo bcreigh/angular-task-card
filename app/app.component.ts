@@ -9,15 +9,12 @@ import { Task } from './model/task';
 })
 
 export class AppComponent {
-  private tasks = [
-    new Task(
-      "Do a cool thing",
-      false
-    ),
-    new Task(
-      "Do another cool thing",
-      false
-    )
-  ]
+  private tasks: Task[] = [];
   private currentTask = new Task(null, false);
+
+  addTask() {
+    let task = new Task(this.currentTask.content, this.currentTask.completed);
+    this.tasks.push(task);
+    this.currentTask.content = null;
+  }
 }
