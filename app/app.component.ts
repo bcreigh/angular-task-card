@@ -4,12 +4,20 @@ import { Task } from './model/task';
 @Component({
   moduleId: module.id,
   selector: 'my-app',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 
 export class AppComponent {
-  task1: Task = {
-    content: "Learn to code in Angular2",
-    completed: false
-  }
+  private tasks = [
+    new Task(
+      "Do a cool thing",
+      false
+    ),
+    new Task(
+      "Do another cool thing",
+      false
+    )
+  ]
+  private currentTask = new Task(null, false);
 }
